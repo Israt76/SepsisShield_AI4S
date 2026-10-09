@@ -20,7 +20,7 @@ intended for clinical decision-making.**
 | **Strongest evidence** | Held-out test set of 8,068 patients: AUROC **0.852** (95% CI 0.840–0.865). **53.9%** of septic patients alerted at least 6 h before onset. **95.4%** of alert-changing wrong decisions caused by four simulated accidental fault types were flagged or withheld (6,481 / 6,790; validation-cohort replication **94.7%**), while only **0.46%** of clean patient-hours were withheld. |
 | **Also shown** | A separate **distribution-shift awareness** signal (LOW / MODERATE / HIGH): does this patient's recent input pattern differ from the training data? It is advisory only: it never changes the prediction, the input-trust state or the final decision. |
 | **Limitations** | Deliberately edited inputs: only **42.5%** caught (334 / 786), and 26.5% (232 / 876) when the simulated edits stay physiologically plausible. Performance drops at an unseen hospital (AUROC **0.790 / 0.775**). Faults are simulated, not recorded hospital incidents. |
-| **Try it** | Live demo: **[https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/](https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/)** · or run locally in 60 seconds (below) · demo video: linked on the Devpost project page · technical report: [docs/technical_report.pdf](docs/technical_report.pdf) · claim audit: [AUDIT.md](AUDIT.md) |
+| **Try it** | Live demo: **[https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/](https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/)** · or run locally in 60 seconds (below) · Demo video: [YouTube link to be added] · technical report: [docs/technical_report.pdf](docs/technical_report.pdf) · claim audit: [AUDIT.md](AUDIT.md) |
 
 In this project, "clinical data" means the de-identified ICU time-series measurements in the PhysioNet 2019 Sepsis
 Challenge dataset: vital signs, laboratory measurements and other patient variables recorded hour by hour.
@@ -145,7 +145,7 @@ limitations), and later hours of C's window also contain physiologically implaus
 ## Run in 60 seconds
 
 ```bash
-git clone https://github.com/Israt76/SepsisShield_GITHUB_Repo.git && cd SepsisShield_GITHUB_Repo
+git clone https://github.com/Israt76/SepsisShield_AI4S.git && cd SepsisShield_AI4S
 pip install -r requirements.txt          # exact pinned versions, Python 3.11
 streamlit run app/app.py                 # opens on Judge Demo scenario A
 ```
@@ -513,7 +513,7 @@ src/            data → features → training → integrity → experiments →
 tests/          leakage, isolation, integrity, utility and pipeline tests (run in CI, plus a browser test of abstention)
 models/         5 LightGBM models, calibrator, thresholds, integrity config
 results/        results JSON, figures, screenshots, logs/
-submission/     Devpost text, video, video script, gallery; ml_empowerment/ = competition-specific assets
+submission/     AI4S writeup, video assets, and competition materials
 tools/          screenshot, architecture, video and report tooling (tools/report/build_report.py → docs/technical_report.pdf)
 docs/           technical report (PDF + HTML), built from the result files
 ```
