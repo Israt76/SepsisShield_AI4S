@@ -1,0 +1,116 @@
+{
+ "shipped_threshold": 0.030000000000000002,
+ "rows": [
+  {
+   "threshold": 0.01,
+   "patient_sensitivity": 0.9692832764505119,
+   "pct_detected_ge6h_early": 0.909556313993174,
+   "patient_specificity": 0.25942261427425817,
+   "utility_test": 0.29146661621059106,
+   "utility_val": 0.2715662988919959,
+   "false_alert_hours_per_100_patient_days": 799.5439029704409,
+   "alert_episodes_per_100_nonseptic_patient_days": 97.27068051419857,
+   "median_lead_time_h": 12.0
+  },
+  {
+   "threshold": 0.02,
+   "patient_sensitivity": 0.878839590443686,
+   "pct_detected_ge6h_early": 0.6382252559726962,
+   "patient_specificity": 0.6273723603314622,
+   "utility_test": 0.4346047870201746,
+   "utility_val": 0.46979957645462095,
+   "false_alert_hours_per_100_patient_days": 311.41259350715376,
+   "alert_episodes_per_100_nonseptic_patient_days": 48.02963178153824,
+   "median_lead_time_h": 12.0
+  },
+  {
+   "threshold": 0.030000000000000002,
+   "patient_sensitivity": 0.7935153583617748,
+   "pct_detected_ge6h_early": 0.5392491467576792,
+   "patient_specificity": 0.7377706495589414,
+   "utility_test": 0.42516969797308485,
+   "utility_val": 0.48143186418467515,
+   "false_alert_hours_per_100_patient_days": 188.2053889171327,
+   "alert_episodes_per_100_nonseptic_patient_days": 32.53395308301257,
+   "median_lead_time_h": 12.0
+  },
+  {
+   "threshold": 0.04,
+   "patient_sensitivity": 0.7064846416382252,
+   "pct_detected_ge6h_early": 0.44197952218430037,
+   "patient_specificity": 0.8255813953488372,
+   "utility_test": 0.3907706771363024,
+   "utility_val": 0.4643987878646059,
+   "false_alert_hours_per_100_patient_days": 111.16275691771371,
+   "alert_episodes_per_100_nonseptic_patient_days": 20.768392766359213,
+   "median_lead_time_h": 11.0
+  },
+  {
+   "threshold": 0.05,
+   "patient_sensitivity": 0.6723549488054608,
+   "pct_detected_ge6h_early": 0.42150170648464164,
+   "patient_specificity": 0.8491045175086875,
+   "utility_test": 0.37578404011258015,
+   "utility_val": 0.4516315857211387,
+   "false_alert_hours_per_100_patient_days": 92.25070811242647,
+   "alert_episodes_per_100_nonseptic_patient_days": 17.796499382671218,
+   "median_lead_time_h": 12.0
+  },
+  {
+   "threshold": 0.07,
+   "patient_sensitivity": 0.5938566552901023,
+   "pct_detected_ge6h_early": 0.3651877133105802,
+   "patient_specificity": 0.89641807003475,
+   "utility_test": 0.33523095480239357,
+   "utility_val": 0.4202541272274158,
+   "false_alert_hours_per_100_patient_days": 60.623138935289425,
+   "alert_episodes_per_100_nonseptic_patient_days": 12.157745660541798,
+   "median_lead_time_h": 11.0
+  },
+  {
+   "threshold": 0.1,
+   "patient_sensitivity": 0.4590443686006826,
+   "pct_detected_ge6h_early": 0.2713310580204778,
+   "patient_specificity": 0.9481422079657845,
+   "utility_test": 0.26312291573047,
+   "utility_val": 0.3507189741309715,
+   "false_alert_hours_per_100_patient_days": 27.880020335536347,
+   "alert_episodes_per_100_nonseptic_patient_days": 5.708475561042923,
+   "median_lead_time_h": 11.0
+  },
+  {
+   "threshold": 0.15,
+   "patient_sensitivity": 0.4112627986348123,
+   "pct_detected_ge6h_early": 0.23720136518771331,
+   "patient_specificity": 0.9637797380379578,
+   "utility_test": 0.22935952319008546,
+   "utility_val": 0.30338017292819613,
+   "false_alert_hours_per_100_patient_days": 19.269373229718934,
+   "alert_episodes_per_100_nonseptic_patient_days": 3.956714358341201,
+   "median_lead_time_h": 9.0
+  },
+  {
+   "threshold": 0.2,
+   "patient_sensitivity": 0.2354948805460751,
+   "pct_detected_ge6h_early": 0.10580204778156997,
+   "patient_specificity": 0.9909115209836942,
+   "utility_test": 0.10845474326529654,
+   "utility_val": 0.14354678304414464,
+   "false_alert_hours_per_100_patient_days": 5.403442515796354,
+   "alert_episodes_per_100_nonseptic_patient_days": 1.0283971239741447,
+   "median_lead_time_h": 7.0
+  },
+  {
+   "threshold": 0.3,
+   "patient_sensitivity": 0.07337883959044368,
+   "pct_detected_ge6h_early": 0.02218430034129693,
+   "patient_specificity": 0.9990644212777332,
+   "utility_test": 0.022923417137721423,
+   "utility_val": 0.02740759807649553,
+   "false_alert_hours_per_100_patient_days": 0.7669402280485148,
+   "alert_episodes_per_100_nonseptic_patient_days": 0.20045028687631639,
+   "median_lead_time_h": 4.0
+  }
+ ],
+ "note": "test = held-out test set (8,068 patients); threshold was chosen on validation utility"
+}

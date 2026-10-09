@@ -1,0 +1,27 @@
+11:50:38 fit {'targets': ['HR', 'Resp', 'Temp', 'SBP', 'MAP', 'O2Sat'], 'scale': {'HR': 9.797623886228232, 'Resp': 3.4203295228346384, 'Temp': 0.4785694770209073, 'SBP': 7.901797569932236, 'MAP': 2.839329144362305, 'O2Sat': 1.7015875673102951}, 'n_train_rows': {'HR': 600000, 'Resp': 600000, 'Temp': 366656, 'SBP': 600000, 'MAP': 600000, 'O2Sat': 600000}} 680s
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:52:01 threshold 2.8214593820190434
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:53:30 temp_fahrenheit 0.9911048689138576 -> 0.9911048689138576
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:54:12 lab_unit_error 0.9755011135857461 -> 0.9755011135857461
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:54:53 sensor_artifact 1.0 -> 1.0
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:55:35 frozen_feed 0.4128787878787879 -> 0.45454545454545453
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:56:17 masking_attack 0.4796380090497738 -> 0.5429864253393665
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:56:58 measurement_noise 0.07692307692307693 -> 0.07692307692307693
+/home/claude/israt76/sepsisshield_github_repo/src/crosssignal.py:108: RuntimeWarning: Mean of empty slice
+  s = np.nanmean(np.clip(Z, 0, 10), axis=1)
+11:57:41 masking_plausible 0.21568627450980393 -> 0.2570806100217865

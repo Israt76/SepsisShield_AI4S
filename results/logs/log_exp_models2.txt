@@ -1,0 +1,4 @@
+23:08:09 train 1,086,027 rows, val 156,913, test 309,270, 172 features
+23:11:51 XGBoost (+ isotonic) {'auroc': 0.8526, 'auprc': 0.1278, 'utility': 0.4326, 'ece': 0.0021}
+23:14:34 CatBoost (+ isotonic) {'auroc': 0.839, 'auprc': 0.11, 'utility': 0.4092, 'ece': 0.0034}
+23:14:34 saved /home/claude/israt76/sepsisshield_github_repo/results/exp_models.json

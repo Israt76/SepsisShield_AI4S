@@ -1,0 +1,47 @@
+{
+ "rows": [
+  {
+   "model": "Random forest (+ isotonic)",
+   "auroc": 0.838870370177856,
+   "auprc": 0.10782453582382165,
+   "brier": 0.016730769456148917,
+   "ece": 0.0035719222613964426,
+   "utility": 0.40583891109481807,
+   "patient_sensitivity": 0.8020477815699659,
+   "patient_specificity": 0.6875167067628976,
+   "pct_detected_ge6h_early": 0.5733788395904437,
+   "threshold": 0.025,
+   "train_seconds": 493,
+   "note": "300 trees, min_samples_leaf=100, 400k-row train sub-sample"
+  },
+  {
+   "model": "XGBoost (+ isotonic)",
+   "auroc": 0.852577584147668,
+   "auprc": 0.12782804194711697,
+   "brier": 0.016538508236408234,
+   "ece": 0.00205349529502372,
+   "utility": 0.432618079042596,
+   "patient_sensitivity": 0.8344709897610921,
+   "patient_specificity": 0.6802993851911254,
+   "pct_detected_ge6h_early": 0.5853242320819113,
+   "threshold": 0.0275,
+   "train_seconds": 214,
+   "note": "465 rounds"
+  },
+  {
+   "model": "CatBoost (+ isotonic)",
+   "auroc": 0.8389500206523606,
+   "auprc": 0.11004904877437431,
+   "brier": 0.01673477569961834,
+   "ece": 0.003417240897004803,
+   "utility": 0.4091654643929898,
+   "patient_sensitivity": 0.7474402730375427,
+   "patient_specificity": 0.7741245656241647,
+   "pct_detected_ge6h_early": 0.5085324232081911,
+   "threshold": 0.0275,
+   "train_seconds": 161,
+   "note": "372 iterations"
+  }
+ ],
+ "protocol": "same 70/10/20 patient split as the deployed model (train.split_patients, seed 0); early stopping, isotonic calibration and utility-optimal threshold chosen on validation patients only; single evaluation on held-out test patients"
+}

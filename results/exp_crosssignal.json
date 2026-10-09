@@ -1,0 +1,301 @@
+{
+ "protocol": "(written before the test-set run; do not edit after it):\n  1. Fit the regression models on TRAINING patients only.\n  2. Threshold = 99th percentile of the score on all clean VALIDATION patient-hours (adds at most ~1% flagged hours).\n  3. Development check on the VALIDATION benchmark cohort (same construction as results/abstention_val.json).\n  4. ONE evaluation on the held-out TEST benchmark cohort (identical patients and corruption windows as\n     results/abstention.json), plus the clean cost on all 8,068 test patients.\n  5. Action if shipped: a flag lowers trust to REDUCED only (warn), never LOW.\n  6. SHIP CRITERION (both on test): plausible deliberate-edit coverage rises by >= 10 percentage points, AND the total\n     share of clean test hours flagged or withheld rises by <= 2 percentage points. Otherwise: report as a negative or\n     partial result and do not ship.",
+ "threshold": 2.8214593820190434,
+ "models": {
+  "scale": {
+   "HR": 9.797623886228232,
+   "Resp": 3.4203295228346384,
+   "Temp": 0.4785694770209073,
+   "SBP": 7.901797569932236,
+   "MAP": 2.839329144362305,
+   "O2Sat": 1.7015875673102951
+  },
+  "n_train_rows": {
+   "HR": 600000,
+   "Resp": 600000,
+   "Temp": 366656,
+   "SBP": 600000,
+   "MAP": 600000,
+   "O2Sat": 600000
+  }
+ },
+ "validation_benchmark": {
+  "clean_cohort_flag_rate_added": 0.007520895684401507,
+  "temp_fahrenheit": {
+   "before": {
+    "n": 2136,
+    "withheld": 778,
+    "flagged": 1339,
+    "silent": 19,
+    "coverage": 0.9911048689138576
+   },
+   "after": {
+    "n": 2136,
+    "withheld": 778,
+    "flagged": 1339,
+    "silent": 19,
+    "coverage": 0.9911048689138576
+   },
+   "window_hours_flagged_by_detector": 0.08815678104043231
+  },
+  "lab_unit_error": {
+   "before": {
+    "n": 449,
+    "withheld": 128,
+    "flagged": 310,
+    "silent": 11,
+    "coverage": 0.9755011135857461
+   },
+   "after": {
+    "n": 449,
+    "withheld": 128,
+    "flagged": 310,
+    "silent": 11,
+    "coverage": 0.9755011135857461
+   },
+   "window_hours_flagged_by_detector": 0.0111986457451657
+  },
+  "sensor_artifact": {
+   "before": {
+    "n": 649,
+    "withheld": 505,
+    "flagged": 144,
+    "silent": 0,
+    "coverage": 1.0
+   },
+   "after": {
+    "n": 649,
+    "withheld": 505,
+    "flagged": 144,
+    "silent": 0,
+    "coverage": 1.0
+   },
+   "window_hours_flagged_by_detector": 0.5105150074874666
+  },
+  "frozen_feed": {
+   "before": {
+    "n": 264,
+    "withheld": 1,
+    "flagged": 108,
+    "silent": 155,
+    "coverage": 0.4128787878787879
+   },
+   "after": {
+    "n": 264,
+    "withheld": 1,
+    "flagged": 119,
+    "silent": 144,
+    "coverage": 0.45454545454545453
+   },
+   "window_hours_flagged_by_detector": 0.014323849208932874
+  },
+  "masking_attack": {
+   "before": {
+    "n": 442,
+    "withheld": 47,
+    "flagged": 165,
+    "silent": 230,
+    "coverage": 0.4796380090497738
+   },
+   "after": {
+    "n": 442,
+    "withheld": 47,
+    "flagged": 193,
+    "silent": 202,
+    "coverage": 0.5429864253393665
+   },
+   "window_hours_flagged_by_detector": 0.06712676606549906
+  },
+  "measurement_noise": {
+   "before": {
+    "n": 39,
+    "withheld": 1,
+    "flagged": 2,
+    "silent": 36,
+    "coverage": 0.07692307692307693
+   },
+   "after": {
+    "n": 39,
+    "withheld": 1,
+    "flagged": 2,
+    "silent": 36,
+    "coverage": 0.07692307692307693
+   },
+   "window_hours_flagged_by_detector": 0.012110163422097793
+  },
+  "masking_plausible": {
+   "before": {
+    "n": 459,
+    "withheld": 10,
+    "flagged": 89,
+    "silent": 360,
+    "coverage": 0.21568627450980393
+   },
+   "after": {
+    "n": 459,
+    "withheld": 10,
+    "flagged": 108,
+    "silent": 341,
+    "coverage": 0.2570806100217865
+   },
+   "window_hours_flagged_by_detector": 0.019532521648544826
+  },
+  "accidental": {
+   "before": {
+    "n": 3498,
+    "covered": 3313,
+    "coverage": 0.9471126357918811
+   },
+   "after": {
+    "n": 3498,
+    "covered": 3324,
+    "coverage": 0.9502572898799314
+   }
+  }
+ },
+ "test_benchmark": {
+  "clean_cohort_flag_rate_added": 0.008359180271372814,
+  "temp_fahrenheit": {
+   "before": {
+    "n": 4329,
+    "withheld": 1609,
+    "flagged": 2708,
+    "silent": 12,
+    "coverage": 0.9972279972279973
+   },
+   "after": {
+    "n": 4329,
+    "withheld": 1609,
+    "flagged": 2708,
+    "silent": 12,
+    "coverage": 0.9972279972279973
+   },
+   "window_hours_flagged_by_detector": 0.08575150626933724
+  },
+  "lab_unit_error": {
+   "before": {
+    "n": 697,
+    "withheld": 200,
+    "flagged": 471,
+    "silent": 26,
+    "coverage": 0.9626972740315638
+   },
+   "after": {
+    "n": 697,
+    "withheld": 200,
+    "flagged": 471,
+    "silent": 26,
+    "coverage": 0.9626972740315638
+   },
+   "window_hours_flagged_by_detector": 0.011333659013190034
+  },
+  "sensor_artifact": {
+   "before": {
+    "n": 1255,
+    "withheld": 951,
+    "flagged": 304,
+    "silent": 0,
+    "coverage": 1.0
+   },
+   "after": {
+    "n": 1255,
+    "withheld": 951,
+    "flagged": 304,
+    "silent": 0,
+    "coverage": 1.0
+   },
+   "window_hours_flagged_by_detector": 0.5056831134994301
+  },
+  "frozen_feed": {
+   "before": {
+    "n": 509,
+    "withheld": 6,
+    "flagged": 232,
+    "silent": 271,
+    "coverage": 0.4675834970530452
+   },
+   "after": {
+    "n": 509,
+    "withheld": 6,
+    "flagged": 240,
+    "silent": 263,
+    "coverage": 0.48330058939096265
+   },
+   "window_hours_flagged_by_detector": 0.00986809965803615
+  },
+  "masking_attack": {
+   "before": {
+    "n": 786,
+    "withheld": 66,
+    "flagged": 268,
+    "silent": 452,
+    "coverage": 0.42493638676844786
+   },
+   "after": {
+    "n": 786,
+    "withheld": 66,
+    "flagged": 294,
+    "silent": 426,
+    "coverage": 0.4580152671755725
+   },
+   "window_hours_flagged_by_detector": 0.06793681810780003
+  },
+  "measurement_noise": {
+   "before": {
+    "n": 87,
+    "withheld": 2,
+    "flagged": 9,
+    "silent": 76,
+    "coverage": 0.12643678160919541
+   },
+   "after": {
+    "n": 87,
+    "withheld": 2,
+    "flagged": 11,
+    "silent": 74,
+    "coverage": 0.14942528735632185
+   },
+   "window_hours_flagged_by_detector": 0.012180426640612278
+  },
+  "masking_plausible": {
+   "before": {
+    "n": 876,
+    "withheld": 33,
+    "flagged": 199,
+    "silent": 644,
+    "coverage": 0.2648401826484018
+   },
+   "after": {
+    "n": 876,
+    "withheld": 33,
+    "flagged": 214,
+    "silent": 629,
+    "coverage": 0.2819634703196347
+   },
+   "window_hours_flagged_by_detector": 0.02077837485751506
+  },
+  "accidental": {
+   "before": {
+    "n": 6790,
+    "covered": 6481,
+    "coverage": 0.9544918998527246
+   },
+   "after": {
+    "n": 6790,
+    "covered": 6489,
+    "coverage": 0.9556701030927836
+   }
+  },
+  "clean_full_test": {
+   "hours": 309270,
+   "flagged_or_withheld_before": 0.05144048889320012,
+   "flagged_or_withheld_after": 0.05939147023636305,
+   "detector_flag_rate": 0.010463349177094449
+  },
+  "decision": {
+   "plausible_edit_gain": 0.01712328767123289,
+   "clean_cost_increase": 0.007950981343162931,
+   "ship": false
+  }
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "note": "Sensitivity analysis only; the reported benchmark numbers (results/abstention.json) are unchanged.",
+ "plausible_edit_limits": {
+  "HR": [
+   60,
+   null
+  ],
+  "Resp": [
+   12,
+   null
+  ],
+  "Temp": [
+   36.0,
+   null
+  ],
+  "SBP": [
+   null,
+   160
+  ],
+  "MAP": [
+   null,
+   110
+  ]
+ },
+ "original_edit": {
+  "n": 786,
+  "withheld": 66,
+  "flagged": 268,
+  "silent": 452,
+  "coverage": 0.42493638676844786
+ },
+ "plausible_edit": {
+  "n": 876,
+  "withheld": 33,
+  "flagged": 199,
+  "silent": 644,
+  "coverage": 0.2648401826484018
+ },
+ "original_edit_hours_with_resp_below_4": 1177,
+ "edited_hours": 30705,
+ "original_covered_hours_with_implausible_flag": 34,
+ "original_covered_hours_with_coordinated_shift_flag": 130,
+ "runtime_s": 51
+}

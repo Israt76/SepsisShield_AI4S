@@ -1,0 +1,17 @@
+23:03:44 cohort 3086 patients 124773 hours
+23:04:02 missing 0.05 0.8105 249
+23:04:19 missing 0.1 0.8076 580
+23:04:36 missing 0.2 0.8041 1192
+23:04:54 missing 0.3 0.8039 1625
+23:05:11 missing 0.4 0.7913 2083
+23:05:28 noise 0.05 0.8106 499
+23:05:45 noise 0.1 0.8111 866
+23:06:02 noise 0.2 0.8079 1932
+23:06:19 noise 0.3 0.8052 2924
+23:06:38 noise 0.5 0.8017 5390
+23:06:55 extreme {'injected_hours': 1232, 'values': 'HR=900, Temp=70 C, SBP=-20 (one per hit hour)', 'injected_hours_trust_low': 1232, 'injected_hours_trust_low_pct': 1.0, 'auroc': 0.809587596881701, 'utility': 0.5073963482415269, 'trust_low_pct': 0.01590087599079929}
+23:07:12 cohort shifted_vitals (HR+20, Resp+6, Temp+1 C) 0.7939 0.1085
+23:07:30 cohort missing_labs (60% of lab values removed) 0.7974 0.05
+23:07:47 cohort older_cohort (Age +25 y, capped at 100) 0.809 0.0431
+23:08:04 cohort measurement_noise (0.3 SD) 0.8081 0.1038
+23:08:05 saved /home/claude/israt76/sepsisshield_github_repo/results/exp_robustness.json

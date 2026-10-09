@@ -1,0 +1,19 @@
+22:54:18 cohort 3086 patients 124773 hours
+22:54:36 benchmark temp_fahrenheit 4329
+22:54:53 benchmark lab_unit_error 697
+22:55:10 benchmark sensor_artifact 1255
+22:55:27 benchmark frozen_feed 509
+22:56:12 benchmark check {'dangerous_failures': 6790, 'caught': 6481, 'expected_from_abstention_json': [6481, 6790]}
+Traceback (most recent call last):
+  File "/home/claude/israt76/sepsisshield_github_repo/src/exp_robustness.py", line 350, in <module>
+    main(sys.argv[1:] or ["calibration", "selective", "ablation", "sweeps", "cohort_shift"])
+  File "/home/claude/israt76/sepsisshield_github_repo/src/exp_robustness.py", line 339, in main
+    R["sweeps"] = sweeps(raw, clean, srng); json.dump(R, open(OUT, "w"), indent=1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/israt76/sepsisshield_github_repo/src/exp_robustness.py", line 116, in sweeps
+    cr, m = drop_values(raw, f, rng)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/israt76/sepsisshield_github_repo/src/exp_robustness.py", line 84, in drop_values
+    X[kill] = np.nan
+    ~^^^^^^
+ValueError: assignment destination is read-only

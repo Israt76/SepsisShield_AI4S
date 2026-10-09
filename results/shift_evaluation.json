@@ -1,0 +1,115 @@
+{
+ "method": "see src/shift.py docstring",
+ "features": [
+  "FiO2_hrs_since",
+  "n_labs_cum",
+  "HospAdmTime",
+  "Lactate_hrs_since",
+  "WBC",
+  "Creatinine",
+  "Temp",
+  "Temp_max6",
+  "Platelets",
+  "sirs_score",
+  "Temp_max12",
+  "PTT",
+  "BUN",
+  "WBC_delta",
+  "PaCO2_hrs_since",
+  "Alkalinephos",
+  "EtCO2_hrs_since",
+  "Age",
+  "Unit1",
+  "shock_index"
+ ],
+ "thresholds": {
+  "moderate": 0.058823529411764705,
+  "high": 0.1272727272727273
+ },
+ "train_rates": {
+  "LOW": 0.9516098586867545,
+  "MODERATE": 0.03839407307553127,
+  "HIGH": 0.009996068237714163
+ },
+ "test_rates": {
+  "LOW": 0.9537944191159828,
+  "MODERATE": 0.03605264008794904,
+  "HIGH": 0.01015294079606816
+ },
+ "test_rates_by_hospital": {
+  "A": {
+   "LOW": 0.9510666903427107,
+   "MODERATE": 0.03779711321376931,
+   "HIGH": 0.011136196443519951
+  },
+  "B": {
+   "LOW": 0.9566318789334107,
+   "MODERATE": 0.03423799031572836,
+   "HIGH": 0.009130130750860898
+  }
+ },
+ "cross_hospital": {
+  "reference_A": {
+   "test_A_same": {
+    "LOW": 0.9566791811471044,
+    "MODERATE": 0.03381446437178154,
+    "HIGH": 0.009506354481114128
+   },
+   "test_B_other": {
+    "LOW": 0.926180517989788,
+    "MODERATE": 0.059952766086577916,
+    "HIGH": 0.013866715923634108
+   }
+  },
+  "reference_B": {
+   "test_B_same": {
+    "LOW": 0.9530695446809072,
+    "MODERATE": 0.03876347419946433,
+    "HIGH": 0.008166981119628462
+   },
+   "test_A_other": {
+    "LOW": 0.9149374698764617,
+    "MODERATE": 0.07263894878364324,
+    "HIGH": 0.01242358133989498
+   }
+  }
+ },
+ "by_state_test": {
+  "LOW": {
+   "hours": 294980,
+   "patients": 7975,
+   "auroc": 0.851767747024194,
+   "observed_rate": 0.017190995999728797,
+   "mean_predicted": 0.016398913865436744,
+   "auroc_ci95": [
+    0.8382306273288785,
+    0.8654632253755047
+   ],
+   "septic_hours": 5071
+  },
+  "MODERATE": {
+   "hours": 11150,
+   "patients": 1051,
+   "auroc": 0.8567024843070925,
+   "observed_rate": 0.032914798206278024,
+   "mean_predicted": 0.028615193921593656,
+   "auroc_ci95": [
+    0.8191199739852001,
+    0.8922747230879493
+   ],
+   "septic_hours": 367
+  },
+  "HIGH": {
+   "hours": 3140,
+   "patients": 452,
+   "auroc": 0.749092033844189,
+   "observed_rate": 0.03694267515923567,
+   "mean_predicted": 0.04750703787419653,
+   "auroc_ci95": [
+    0.6208074522941457,
+    0.8621648102858406
+   ],
+   "septic_hours": 116
+  }
+ }
+}
