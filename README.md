@@ -1,6 +1,6 @@
 # 🛡️ SepsisShield AI: Trust-Aware Early Warning for Sepsis
 
-[![CI](https://github.com/Israt76/SepsisShield_GITHUB_Repo/actions/workflows/ci.yml/badge.svg)](https://github.com/Israt76/SepsisShield_GITHUB_Repo/actions/workflows/ci.yml)
+[![CI](https://github.com/Israt76/SepsisShield_AI4S/actions/workflows/ci.yml/badge.svg)](https://github.com/Israt76/SepsisShield_AI4S/actions/workflows/ci.yml)
 
 **SepsisShield predicts sepsis early and runs independent input-integrity checks on the clinical data behind each
 prediction, so it can warn about or withhold a prediction when those inputs look unreliable.**
@@ -20,14 +20,14 @@ intended for clinical decision-making.**
 | **Strongest evidence** | Held-out test set of 8,068 patients: AUROC **0.852** (95% CI 0.840–0.865). **53.9%** of septic patients alerted at least 6 h before onset. **95.4%** of alert-changing wrong decisions caused by four simulated accidental fault types were flagged or withheld (6,481 / 6,790; validation-cohort replication **94.7%**), while only **0.46%** of clean patient-hours were withheld. |
 | **Also shown** | A separate **distribution-shift awareness** signal (LOW / MODERATE / HIGH): does this patient's recent input pattern differ from the training data? It is advisory only: it never changes the prediction, the input-trust state or the final decision. |
 | **Limitations** | Deliberately edited inputs: only **42.5%** caught (334 / 786), and 26.5% (232 / 876) when the simulated edits stay physiologically plausible. Performance drops at an unseen hospital (AUROC **0.790 / 0.775**). Faults are simulated, not recorded hospital incidents. |
-| **Try it** | Live demo: **[https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/](https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/)** · or run locally in 60 seconds (below) · Demo video: [YouTube link to be added] · technical report: [docs/technical_report.pdf](docs/technical_report.pdf) · claim audit: [AUDIT.md](AUDIT.md) |
+| **Try it** | Live demo: **[https://sepsisshieldai4s-y6i6daeebnwhp9nnofhs4s.streamlit.app/](https://sepsisshieldai4s-y6i6daeebnwhp9nnofhs4s.streamlit.app/)** · or run locally in 60 seconds (below) · Demo video: [https://youtu.be/v7bNpHBAgfQ](https://youtu.be/v7bNpHBAgfQ) · technical report: [docs/technical_report.pdf](docs/technical_report.pdf) · claim audit: [AUDIT.md](AUDIT.md) |
 
 In this project, "clinical data" means the de-identified ICU time-series measurements in the PhysioNet 2019 Sepsis
 Challenge dataset: vital signs, laboratory measurements and other patient variables recorded hour by hour.
 
 ## Live demo
 
-**[https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/](https://sepsisshieldapprepo-diqdknfnksrq5yyf6wkcrd.streamlit.app/)** (Streamlit Community Cloud; first load after inactivity can take ~30 s while the app wakes). The page
+**[https://sepsisshieldai4s-y6i6daeebnwhp9nnofhs4s.streamlit.app/](https://sepsisshieldai4s-y6i6daeebnwhp9nnofhs4s.streamlit.app/)** (Streamlit Community Cloud; first load after inactivity can take ~30 s while the app wakes). The page
 opens directly on Judge Demo scenario A.
 
 ![Judge Demo Mode: edited chart, model confident, input trust LOW, prediction withheld](results/screenshots/02_prediction_withheld.png)
